@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">    
+    <script src="https://kit.fontawesome.com/720dd83f0d.js" crossorigin="anonymous"></script>
+
+    <title>graphs</title>  
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Logo</a>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Top Props</a></li>
+                <li><a href="#">NBA</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="home-page-container">
+        <div class="sidebar-container">
+          <div class="sidebar">sidebar</div>
+        </div>
+        <div class="central-container">
+            <div class="big-logo-container">
+                <img src="big_logo.png">
+            </div>
+            <div class="search-container">
+                <form action="/search" method="GET">
+                    <input type="text" class="search-input" placeholder="Search for a player..." id="search" list="autocomplete-list">
+                    <datalist id="autocomplete-list"></datalist>
+                    <button type="submit" class="search-button"><img src="search.png"></button>
+                </form>
+            </div>
+            <div class="first-prop-banner-container">
+                <img src="nba_images/ingram_banner_first.png">
+            </div>
+            <div class="prop-banner-container">
+                <img src="nba_images/ingram_banner.png">
+            </div>
+            <div class="prop-banner-container">
+                <img src="nba_images/ingram_banner.png">
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="sidebar">sidebar</div>
+        </div>
+    </div>
+    <script src="autocomplete.js"></script>
+</body>
+</html>
+

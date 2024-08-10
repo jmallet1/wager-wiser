@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/3.0.1/chartjs-plugin-annotation.min.js" 
+    integrity="sha512-Hn1w6YiiFw6p6S2lXv6yKeqTk0PLVzeCwWY9n32beuPjQ5HLcvz5l2QsP+KilEr1ws37rCTw3bZpvfvVIeTh0Q==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/720dd83f0d.js" crossorigin="anonymous"></script>
+
+    <title>graphs</title>  
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Logo</a>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Top Props</a></li>
+                <li><a href="#">NBA</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="flex-container">
+        <div class="left-row">
+            <div class="left-top">
+                <div class="sidebar-title">Matchup</div>
+                <hr class="line-item-separator">
+                Matchup<br>
+                matchup, time, stat allowed per game (by position?), rank among league?<br>
+                can shrink or enlarge this box size
+                <br>display image for good, mid, or bad matchup (maybe add excellent or horrible for bottom/top 5)
+            </div>
+            <div class="left-bottom">
+                <div id="highest-line" class="odds-container"></div>
+                <div id="lowest-line" class="odds-container"></div>
+            </div>
+        </div>
+
+        <div class="middle-row">
+
+            <div class="player-and-buttons">
+
+                <div class="player-bar">
+                    <div class="headshot-container">
+                        <img src="nba_images/fvv.png" class="player-headshot">
+                    </div>
+                    <div class="player-name-pos" id="player-details"></div>
+                    <div class="vertical-line"></div>
+                    <div class="season-avg-container">
+                        <div class="season-stat-container" id="pts-container"></div>
+
+                        <div class="stat-separator"></div>
+
+                        <div class="season-stat-container" id="reb-container"></div>
+
+                        <div class="stat-separator"></div>
+
+                        <div class="season-stat-container" id="ast-container"></div>
+                    </div>
+                </div>
+
+                <hr class="player-button-separator">
+
+                <div id="button-container" class="button-container">
+                    <p id="choose-prop-label">Choose a Prop:</p>
+                </div>
+
+            </div>
+
+            <div id="graph-container">
+                <canvas id="barChart"></canvas>        
+            </div>
+
+            <div class="middle-bottom">
+                <div class="donut-container">
+                    <canvas id="szn-donut"></canvas>
+                </div>
+                <div class="middle-bottom-middle">
+                    <div class="recommendation-title">
+                        <p>AI Projection</p>
+                    </div>
+                    <div class="recommendation">
+
+                    </div>
+                </div>
+                <div class="donut-container">
+                    <canvas id="h2h-donut"></canvas>  
+                </div>            
+            </div>
+
+        </div>
+
+        <div class="right-row">
+            <div class="right-top">
+                <img src="misc/prizepicks.png" class="prizepicks-banner">
+                <img src="misc/qr_code.png" class="prizepicks-qr">
+            </div>
+            <div id="recent-news" class="right-bottom">
+            </div>
+        </div>
+    </div>
+
+    <script src="chart.js"></script>
+
+</body>
+</html>
